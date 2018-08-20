@@ -16,17 +16,14 @@ public class Permutation {
 
         if (k > 0) {
             RandomizedQueue<String> q = new RandomizedQueue<>();
+
             while (!StdIn.isEmpty()) {
-                if (q.size() == k) {
-                    q.dequeue();
-                }
                 q.enqueue(StdIn.readString());
             }
 
-            for (String item : q) {
-                StdOut.println(item);
+            for (int a = 0; a < k; a++) {
+                StdOut.println(q.dequeue());
             }
         }
-
     }
 }
